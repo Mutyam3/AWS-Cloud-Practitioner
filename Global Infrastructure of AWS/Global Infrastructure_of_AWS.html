@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> Global Infrastructure_of_AWS
+        </title>
+    </head>
+    <body>
+        <pre>
+            <code>
+                *** Global Infrastructure of AWS ***
+
+                Topic 1 : Introduction to AWS Global Infrastructure 
+
+                Topic 2 : Regions 
+
+                Topic 3 : Availability Zones 
+
+                Topic 4 : Local Zones 
+
+                Topic 5 : Edge Location 
+
+                Topic 6 : CloudFront 
+
+
+            ==> Topic 1 : Introduction to AWS Global Infrastructure 
+
+                  As of mid-2025, Amazon Web Services (AWS) has 33 active regions and 108 Availability Zones (AZs) globally, 
+                  with plans to add six new regions (Mexico, New Zealand, Saudi Arabia, Thailand, Taiwan, and 
+                  the AWS European Sovereign Cloud) and 18 new Availability Zones in the near future.
+
+                  In amazon console, when you click on AWS Regional Services, You will get all the list of AWS Services Available by Region 
+                  AWS Edge Network Locations  (Services offered in the regions).
+                  
+               **** Factors behind region selection (why should i select this region based on what)
+
+                     1 factor : Compliance with data governance and legal requirements 
+
+                     2 factor : Latency 
+
+                     3 factor : Available Services within a Region 
+
+                     4 factor : Cost
+                     
+                ==>  Availability Zones :
+                
+                            Region - Mumbai (ap-south-1)
+
+                            in this Region the availabilty zones are 3 
+
+                            Availability Zones-1  
+
+                            Availability Zones-2 
+
+                            Availability Zones-3
+
+                 Each availability zone has multiple data centers - how many data centers are there means it not disclosed
+                 Availability Zones are Collections of data. 
+
+                 Important Question : Each Avilability Zone is 100km away from each other. Now, Question comes why there is a 100km 
+                                      between two availability Zones ?
+                         let's take an Example, Mumbai Region has three Availability zones. 
+                         availability zones are within 1 km. Now, we know that Mumbai is famous for flood now
+                         if flood is there, all availability Zone will go down in one go or if there is any natural Calamity any natural 
+                         thing which is happening like earthquake or something like that. So all availability Zone will go down simultaneously. So in order to
+                         keep High availability, please make a note of it in order to keep High availability. what happens a distance of
+                         100 km is kept between two availability zones.
+
+                ==> Local Zones : 
+                
+                    AWS Local Zones are a type of infrastructure deployment that places compute, storage, database and other select AWS services 
+                    close to large population and insustry centers.
+
+                    Latency sensitive application : 
+
+                        - Real time Gaming
+                        - AR/VR 
+                        - Media and Entertainment 
+                        - Video Streaming 
+
+                    ** Runs latency sensitive applications closer to end users. 
+
+                       Availabity zones are the parents to local zones 
+                       Chennai and Bangalore local zones are under the Hyderabad (parent)
+                
+                ==> Edge Location : 
+
+                      A site that CloudFront users to cache copies of your content for faster delivery to users at any location. 
+
+                      To deliver content to end users with lower latency, Amazon CloudFront uses a global network of 550+ Points of presence and 
+                      13 regional edge caches in 100+ cities across 50 countries.
+
+                      Amazon CloudFront Edge locations are located in India : 
+                      New Delhi,India (14); 
+                      Chennai, India (8);
+                      Mumbai, India (8);
+                      Pune, India (4);
+                      Bangalore, India(5);
+                      Hyderabad, India (5);
+                      Kolkata, India (4);
+
+
+                      origin -----caching site---------Edge Location ----------User
+
+                     All Regions are connected by Backbone Network fiber cables, so they are connected via
+                     AWS backbone Network and this backbone fiber cables are floating in pacific and Atlantic Oceans. 
+
+
+                     Let's talk about origin is South America where there is some data or some application running now if I want to access this
+                     application from India. So what I will do I will be doing. I'll be using cloudfront service means I'll be using as locations of India and 
+                     India have so many Edge locations like in Delhi(There are 14 edge locations),in Chennai(8), Mumbai(8), Pune(8), Bangalore(5) Hyderabad(5) Kolkata(4).
+                     So like this. We have a different part of the world. Which have so many edge locations nearly 400+ locations. So now if I have to watch our
+                     content, so this content will be cached , this caching site to the edge location now all the users which are there in India or closer to
+                     India will be watching their content from their nearest Edge location instead of watching the content from origin from South America. They'll be
+                     watching a content from where from their nearest Edge location and who will help the help that cloudfront.
+                     cloudfront service will help them. What is cloudfront? - cloudfront is the content delivery network service.
+                     So To deliver content to end users with lower latency, Amazon CloudFront uses a global network of 550+ Points of presence and 
+                     13 regional edge caches in 100+ cities across 50 countries.
+
+                     So what our regional edge cache 
+                     About Edge caching, but what is regional which have greater size than these caches now ? 
+                     What are caches?  caches are a memory which has a limited memory and every cache has a TTL value (time to live) 
+                     that is how long our data can live in this caching because our data could be old data stale data. So time to
+                     live let's say I'm setting a by default time 24 hours. after 24 hours it will get deleted. 
+
+            ==> Cloud Front : CDN SERVICE 
+                ------------- 
+
+                Amazon CloudFront is a web service that gives businesses and web application developers an easy amd cost effective way to 
+                distribute content with low latency and high data transfer speeds. Like other AWS services, Amazon CloudFront is a self-service, pay-per-use offering,
+                requiring no long-term commitments or minimum fees. With CloudFront, your files are delivered to end-users using a global network of edge locations. 
+                
+                
+
+
+
+
+
+
+                 
+
+
+
+                
+                     
+
+
+
+
+            
+
+            </code>
+        </pre>
+    </body>
+</html>
