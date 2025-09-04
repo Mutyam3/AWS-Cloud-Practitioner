@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>
+            Mutyam ==> IP Addressing and CIDR 
+        </title>
+    </head>
+    <body>
+        <pre>
+            <code>
+                *** IP ADDRESSING AND CIDR ***
+
+    ==> IPV4 Address and CIDR :
+
+           
+       Internet Protocol Version 4 : 192.168.25.7 = 32 bits 
+                                      8 . 8. 8. 8 = 32 bits 
+
+                                here 192 is the decimal form its not bits. 
+                                
+                     192. 168. 25. 7
+
+                           2^7  2^6  2^5  2^4  2^3  2^2  2^1  2^0
+
+                           128  64    32   16   8    4    2    1 
+
+                    7 ==>   0    0    0    0    0    1    1     1
+
+                    25 ==>  0    0     0   1    1     0    0    1
+
+                    168 ==> 1    0     1   0    1     0    0    0
+
+                    192 ==> 1    1     0   0    0     0    0    0
+                    . 
+                    . 
+                    . 
+                    255 ==> 1    1     1    1   1    1     1    1
+
+
+        ** Make all digits one  then this become 255  (128 + 64 + 32 + 16 + 8 + 4 +2 + 1)
+           because of this you have never encountered any IP more than 255 that means any octet 
+           cannot be greater than  255 because of all the digits are one then also it cannot go beyond 255
+           so any ip address cannot be like this 9.3.327.421 here 327 and 421 is not possible.   
+
+         so in binary format we can write this ip address as : 
+
+         192.168.25.7 ==>  
+
+                     11000000.10101000.00011001.00000111 
+                     -------- -------- -------- --------
+                       192       168     25        7 
+
+        CIDR means classless inter domain routing : 
+
+        192.168.0.0/24  here /24 means kindly block first 24 bits that means those 24 bits won't change , remaining 
+        can change. 
+
+        0 to 255 I can create 256 Ip's 
+        
+        Suppose Tcs organization the cider of TCS is 192.168.0.0/24
+
+        192.168.0.0   192.168.0.1   192.168.0.2   192.168.0.3 .... 192.168.0.134 ....192.168.0.255
+
+        here the first 3 octet 192 | 168 | 0 never change 
+       
+        The first IP is reserved for networking and the last IP is reserved for broadcast 
+
+        256=2 = 254 hosts created 
+
+        Formula to calculate how many hosts get created means 2^32-n  ==> n = /24 so 2^32-24 = 2^8 = 256 
+
+        for 10.0.0.0/20  ==>  20 is CIDR means 20 bits block so 10.0. these two completely blocked and next 0 opens up like 8 bits and block 4 bits from those 8 bits.
+             ==> 2^32-n ==> 2^32-20 = 2^12 = 4096
+        
+        for 172.31.0.0/16 ==> 16 is CIDR =  2^32-n = 2^32-16 = 2^16 = 65536 IPs can generate 
+        
+           172.31 got blocked as 16 bits blocked and remaining 0.0 ==> 0-255 | 0-255 possible IPs
+                                                                        256  *  256  = 65536 
+
+
+        ***** 192.168.0.0/22  ==> 2^32-22 ==> 2^10 ==> 1024-5 = 1019 IPs 
+             
+              5 IPs are reserved ==> 
+
+              1st ==> Networking
+              II ==> DNS 
+              III ==> Route 
+              IV ==> Future Purpose 
+              last ==> Broadcast
+
+              **** What CIDR are allowed for VPC(Virtual Private Cloud) in AWS :
+              
+                             
+              /28
+              . 
+              . 
+              . 
+              /18 
+              /17 
+              /16 
+
+              It does not support less than /16 or more than /28.
+
+
+            
+
+
+            </code>
+        </pre>
+    </body>
+</html>
